@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <h1>User Registration Form</h1>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+
+    <!-- ========== Personal Information ========== -->
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <p>
+        <label for="fullName">Full Name *</label><br>
+        <input type="text" id="fullName" name="fullName"
+               placeholder="Enter your full name"
+               minlength="3" maxlength="50" required
+               title="Name must be at least 3 characters">
+      </p>
+
+      <p>
+        <label for="email">Email *</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="example@mail.com" required>
+      </p>
+
+      <p>
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone"
+               placeholder="0591234567"
+               pattern="[0-9]{10}"
+               title="Phone must be exactly 10 digits">
+      </p>
+
+      <p>
+        <label for="dob">Date of Birth *</label><br>
+        <input type="date" id="dob" name="dob"
+               min="1950-01-01" max="2010-12-31" required>
+      </p>
+
+      <p>
+        Gender *<br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+      </p>
+    </fieldset>
+
+    <!-- ========== Account Information ========== -->
+    <fieldset>
+      <legend>Account Information</legend>
+
+      <p>
+        <label for="password">Password *</label><br>
+        <input type="password" id="password" name="password"
+               placeholder="At least 8 characters"
+               minlength="8"
+               pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+               title="At least 8 characters, one uppercase letter and one number"
+               required><br>
+        <small>At least 8 characters, with one uppercase letter and one number</small>
+      </p>
+    </fieldset>
+
+    <!-- ========== Preferences ========== -->
+    <fieldset>
+      <legend>Preferences</legend>
+
+      <p>
+        <label for="country">Country *</label><br>
+        <select id="country" name="country" required>
+          <option value="">-- Select your country --</option>
+          <option value="palestine">Palestine</option>
+          <option value="jordan">Jordan</option>
+          <option value="egypt">Egypt</option>
+          <option value="saudi">Saudi Arabia</option>
+          <option value="uae">United Arab Emirates</option>
+          <option value="other">Other</option>
+        </select>
+      </p>
+
+      <p>
+        Interests<br>
+        <input type="checkbox" id="programming" name="interests" value="programming">
+        <label for="programming">Programming</label><br>
+        <input type="checkbox" id="webdesign" name="interests" value="webdesign">
+        <label for="webdesign">Web Design</label><br>
+        <input type="checkbox" id="networks" name="interests" value="networks">
+        <label for="networks">Networks</label><br>
+        <input type="checkbox" id="ai" name="interests" value="ai">
+        <label for="ai">Artificial Intelligence</label>
+      </p>
+
+      <p>
+        <label for="experience">Experience Level (0 - 10)</label><br>
+        <input type="range" id="experience" name="experience"
+               min="0" max="10" value="5" step="1"><br>
+        <small>Slide from 0 (beginner) to 10 (expert)</small>
+      </p>
+    </fieldset>
+
+    <!-- ========== Additional Information ========== -->
+    <fieldset>
+      <legend>Additional Information</legend>
+
+      <p>
+        <label for="photo">Profile Picture</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </p>
+
+      <p>
+        <label for="bio">About You</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="40" maxlength="200"
+                  placeholder="Write a short bio (max 200 characters)"></textarea>
+      </p>
+
+      <p>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the <b>Terms and Conditions</b> *</label>
+      </p>
+    </fieldset>
+
+    <p>
+      <button type="submit">Register</button>
+      <button type="reset">Reset</button>
+    </p>
+
+  </form>
+
+</body>
+</html>
